@@ -5,25 +5,43 @@ plugins {
     id "net.minecrell.plugin-yml.bungee" version "0.3.0"
 }
 
-sourceCompatibility = 1.8
+group = "change.me"
 shadowJar.archiveName = 'plugin.jar'
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 sourceSets {
-    main.kotlin.srcDirs = main.java.srcDirs = ['src']
+    main {
+        kotlin {
+            srcDir 'main/kotlin'
+        }
+        resources {
+            srcDir 'main/conf'
+        }
+    }
 }
 
 repositories {
+    jcenter()
     mavenCentral()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    compile group: 'net.md-5', name: 'bungeecord-api', version: '1.8-SNAPSHOT'
+    compile group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-core', version: '1.3.3'
+    compile group: "org.reflections", name: "reflections", version: "0.9.12"
     compile group: "com.zaxxer", name: "HikariCP", version: "3.4.1"
+
+    compile("org.postgresql:postgresql:42.2.2")
+    compile("org.jetbrains.exposed:exposed-core:0.22.1")
+    compile("org.jetbrains.exposed:exposed-dao:0.22.1")
+    compile("org.jetbrains.exposed:exposed-jdbc:0.22.1")
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61"
+
+    compile group: 'net.md-5', name: 'bungeecord-api', version: '1.8-SNAPSHOT'
     compile "com.github.hazae41:mc-kutils:master-SNAPSHOT"
-    // compile "ch.qos.logback:logback-classic:1.2.1" //uncomment to get deep debug and trace logs
+    compile "ch.qos.logback:logback-classic:1.2.1"
+
     shadow "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
@@ -57,7 +75,7 @@ task startDevServer(dependsOn: ['copyPluginToTestserver', 'setupDevServer'], typ
 }
 
 bungee {
-    main = 'plugin.Main'
+    main = 'change.me.Main'
     author = 'Jonaznas'
     // more configurations https://github.com/Minecrell/plugin-yml
 }

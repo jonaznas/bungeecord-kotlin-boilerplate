@@ -1,4 +1,4 @@
-package plugin.services
+package change.me.util.plugin
 
 import hazae41.minecraft.kutils.bungee.BungeePlugin
 
