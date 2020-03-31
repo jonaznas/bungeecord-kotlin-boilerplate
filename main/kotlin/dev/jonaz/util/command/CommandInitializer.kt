@@ -1,10 +1,11 @@
-package change.me.util.command
+package dev.jonaz.util.command
 
-import change.me.controller.Commands
+import dev.jonaz.Main
+import dev.jonaz.controller.DatabaseCommands
 import hazae41.minecraft.kutils.bungee.command
 import org.reflections.Reflections
 import org.reflections.scanners.MethodAnnotationsScanner
-import change.me.util.plugin.Instance
+import dev.jonaz.util.plugin.Instance
 import hazae41.minecraft.kutils.bungee.BungeeSender
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -13,7 +14,7 @@ import java.lang.reflect.Method
 class CommandInitializer {
 
     fun defineCommands() {
-        val reflections = Reflections(Commands::class.java, MethodAnnotationsScanner())
+        val reflections = Reflections(Main::class.java, MethodAnnotationsScanner())
         val annotated = reflections.getMethodsAnnotatedWith(CommandMapping::class.java)
 
         for (method in annotated) {

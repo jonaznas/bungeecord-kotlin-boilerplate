@@ -1,20 +1,14 @@
 @file:Suppress("unused", "UNUSED_PARAMETER")
 
-package change.me.controller
+package dev.jonaz.controller
 
-import change.me.component.user.NewUser
-import change.me.util.command.CommandMapping
+import dev.jonaz.component.user.NewUser
+import dev.jonaz.util.command.CommandMapping
 import hazae41.minecraft.kutils.bungee.BungeeSender
 import hazae41.minecraft.kutils.bungee.msg
 
-class Commands {
-
-    @CommandMapping("bungeeabc")
-    fun bungeeAbcCommand(sender: BungeeSender, args: Array<String>) {
-        sender.msg("Abc command works :p")
-        Thread.sleep(2000L)
-        sender.msg("Look! Its not blocking the server")
-    }
+// Example name
+class DatabaseCommands {
 
     @CommandMapping("bungeetest")
     fun bungeeTestCommand(sender: BungeeSender, args: Array<String>) {

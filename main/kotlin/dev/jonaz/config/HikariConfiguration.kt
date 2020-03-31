@@ -1,7 +1,7 @@
-package change.me.config
+package dev.jonaz.config
 
-import change.me.util.exposed.DatabaseValidator
-import change.me.util.plugin.PluginConfig
+import dev.jonaz.util.exposed.DatabaseValidator
+import dev.jonaz.util.plugin.PluginConfig
 import com.zaxxer.hikari.HikariConfig
 import net.md_5.bungee.config.Configuration
 

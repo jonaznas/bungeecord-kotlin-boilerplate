@@ -1,13 +1,13 @@
 @file:Suppress("unused")
 
-package change.me
+package dev.jonaz
 
-import change.me.model.DatabaseModelInitializer
-import change.me.util.command.CommandInitializer
-import change.me.util.exposed.DatabaseInitializer
+import dev.jonaz.model.DatabaseModelInitializer
+import dev.jonaz.util.command.CommandInitializer
+import dev.jonaz.util.exposed.DatabaseInitializer
 import hazae41.minecraft.kutils.bungee.BungeePlugin
-import change.me.util.plugin.PluginConfig
-import change.me.util.plugin.Instance
+import dev.jonaz.util.plugin.PluginConfig
+import dev.jonaz.util.plugin.Instance
 import hazae41.minecraft.kutils.bungee.info
 
 class Main : BungeePlugin() {

@@ -1,4 +1,4 @@
-package change.me.util.plugin
+package dev.jonaz.util.plugin
 
 import net.md_5.bungee.config.Configuration
 import net.md_5.bungee.config.ConfigurationProvider
