@@ -9,11 +9,11 @@ class HikariConfiguration {
     private val config = HikariConfig()
     private val pluginConfig: Configuration = PluginConfig().getConfig()
 
-    private val dbHost: String? = pluginConfig.getString("database.host")
-    private val dbPort: String? = pluginConfig.getString("database.port") ?: "5432"
-    private val dbName: String? = pluginConfig.getString("database.name")
-    private val dbUser: String? = pluginConfig.getString("database.user")
-    private val dbPass: String? = pluginConfig.getString("database.pass")
+    private val dbHost: String? = pluginConfig.getString("database_host")
+    private val dbPort: String? = pluginConfig.getString("database_port") ?: "5432"
+    private val dbName: String? = pluginConfig.getString("database_name")
+    private val dbUser: String? = pluginConfig.getString("database_user")
+    private val dbPass: String? = pluginConfig.getString("database_pass")
 
     init {
         println(dbHost)
