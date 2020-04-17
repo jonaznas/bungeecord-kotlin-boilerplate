@@ -1,0 +1,4 @@
+name: "bungeecord-kotlin-boilerplate"
+main: "dev.jonaz.plugin.Main"
+version: 1.0.0
+author: "Jonaznas"
