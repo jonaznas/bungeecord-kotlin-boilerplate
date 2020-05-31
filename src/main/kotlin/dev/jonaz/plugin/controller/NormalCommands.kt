@@ -13,7 +13,7 @@ class NormalCommands {
     fun bungeeAbcCommand(sender: BungeeSender, args: Array<String>) {
         sender.msg("yep thats a non-subcommand command")
         args.forEach { s: String ->
-            println(s)
+            sender.msg(s)
         }
     }
 
@@ -24,7 +24,7 @@ class NormalCommands {
         sender.msg("Look! Its not blocking the server")
     }
 
-    @CommandMapping("abc", "yes")
+    @CommandMapping("abc", "yes", permission = "plugin.test")
     fun bungeeAbcYesCommand(sender: BungeeSender, args: Array<String>) {
         sender.msg("the second sub-command")
     }

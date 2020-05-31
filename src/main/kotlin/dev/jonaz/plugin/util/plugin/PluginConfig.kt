@@ -31,6 +31,7 @@ class PluginConfig {
             config.set("database.user", "username")
             config.set("database.pass", "password")
             config.set("database.name", "database")
+            config.set("errors.permission", "You cant do that")
             save(config, file)
         } catch (e: Exception) {
             e.printStackTrace()
